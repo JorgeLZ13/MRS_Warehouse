@@ -4,7 +4,8 @@
         <arg name="debug" default="false" />
         <arg name="gui" default="true" />
         <arg name="pause" default="false" />
-        <arg name="world" default="$(find turtle_warehouse)/world/warehouse.world" />
+        <arg name="world" default="$(find turtlebot_warehouse)/world/warehouse.world" />
+
         <arg name="base"       value="$(optenv TURTLEBOT_BASE kobuki)"/> <!-- create, roomba -->
         <arg name="battery"    value="$(optenv TURTLEBOT_BATTERY /proc/acpi/battery/BAT0)"/>  <!-- /proc/acpi/battery/BAT0 -->
         <arg name="stacks"     value="$(optenv TURTLEBOT_STACKS hexagons)"/>  <!-- circles, hexagons -->
@@ -20,7 +21,7 @@
                 <arg name="use_sim_time" value="true" />
         </include>
 
-        <include file="$(find turtle_warehouse)/launch/includes/$(arg base).launch.xml">
+        <include file="$(find turtlebot_warehouse)/launch/includes/$(arg base).launch.xml">
                 <arg name="base" value="$(arg base)"/>
                 <arg name="stacks" value="$(arg stacks)"/>
                 <arg name="3d_sensor" value="$(arg 3d_sensor)"/>
